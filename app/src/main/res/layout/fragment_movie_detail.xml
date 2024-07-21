@@ -11,7 +11,6 @@ es un marco donde se tiene una jerarquia de vistas puede ser una imagen,texto, e
 imageview y luego un textview una jerarquia para mostrar las vistas.
 -->
     <FrameLayout
-        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,31 +21,26 @@ imageview y luego un textview una jerarquia para mostrar las vistas.
             android:id="@+id/img_background"
             android:layout_width="match_parent"
             android:layout_height="250dp" />
-
         <!--  View: sirve para crear una vista en el framelayout que sera el fondo de la imagen-->
         <!--le da una forma de carta a la imagen -->
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/gradient" />
-
-
     </FrameLayout>
 
-
+    <!--    vamos a crear una imagen para que se muestre en el framelayout -->
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
         android:layout_width="120dp"
         android:layout_height="170dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
         android:clipToPadding="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
         app:cardCornerRadius="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/img_movie"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
@@ -54,27 +48,13 @@ imageview y luego un textview una jerarquia para mostrar las vistas.
     </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="334dp" />
+        app:layout_constraintGuide_begin="333dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:fontFamily="sans-serif-black"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Movie Title" />
-
+    
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
