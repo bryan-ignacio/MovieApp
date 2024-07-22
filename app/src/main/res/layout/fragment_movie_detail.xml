@@ -6,55 +6,104 @@
     android:layout_height="match_parent"
     tools:context=".MovieDetailFragment">
 
-    <!--
-es un marco donde se tiene una jerarquia de vistas puede ser una imagen,texto, etc
-imageview y luego un textview una jerarquia para mostrar las vistas.
--->
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        <!--    esta es la imagen de fondo del framelayout-->
         <ImageView
             android:id="@+id/img_background"
             android:layout_width="match_parent"
             android:layout_height="250dp" />
-        <!--  View: sirve para crear una vista en el framelayout que sera el fondo de la imagen-->
-        <!--le da una forma de carta a la imagen -->
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/gradient" />
     </FrameLayout>
 
-    <!--    vamos a crear una imagen para que se muestre en el framelayout -->
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
         android:layout_width="120dp"
         android:layout_height="170dp"
         android:clipToPadding="true"
+        app:cardCornerRadius="8dp"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="16dp"
-        app:cardCornerRadius="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="parent">
-
         <ImageView
+            android:id="@+id/img_movie"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@drawable/ic_launcher_background"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="333dp" />
-
-    
+        app:layout_constraintGuide_begin="332dp" />
 
 
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/card_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Movie Title" />
+
+    <TextView
+        android:id="@+id/txt_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/baseline_star_border_24"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/white"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/txt_realease"
+        app:layout_constraintTop_toTopOf="@+id/card_view"
+        tools:text="7.1 (4123 Reviews)" />
+
+    <TextView
+        android:id="@+id/txt_realease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/baseline_calendar_today_24"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/white"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card_view"
+        app:layout_constraintTop_toBottomOf="@+id/txt_rating"
+        tools:text="Realese 21-07-24" />
+
+
+    <TextView
+        android:id="@+id/txt_leng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/baseline_language_24"
+        android:drawablePadding="8dp"
+        android:paddingTop="8dp"
+        android:drawableTint="@color/white"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/txt_realease"
+        app:layout_constraintTop_toBottomOf="@+id/txt_realease"
+        tools:text="Language (En)" />
 </androidx.constraintlayout.widget.ConstraintLayout>
