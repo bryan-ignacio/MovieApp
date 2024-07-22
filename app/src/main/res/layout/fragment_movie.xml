@@ -22,12 +22,10 @@
     </RelativeLayout>
 
 <!-- RecycleView:   lista donde se muestra la informacion   -->
-    <view class="androidx.appcompat.app.AlertController$RecycleListView"
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_movies"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layoutManager = "androidx.recyclerview.widget.LinearLayoutManager">
-    </view>
-
+        app:layoutManager = "androidx.recyclerview.widget.LinearLayoutManager"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
