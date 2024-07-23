@@ -21,4 +21,5 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/movie_item">
     </androidx.recyclerview.widget.RecyclerView>
+
 </LinearLayout>
