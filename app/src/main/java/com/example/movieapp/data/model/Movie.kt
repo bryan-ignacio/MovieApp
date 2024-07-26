@@ -9,6 +9,7 @@ package com.example.movieapp.data.model
 data class Movie(
     val id: Int = -1,
     val adult: Boolean = false,
+    val backdrop_path: String = "",
     val genre_ids: List<Int> = listOf(),
     val original_language: String = "",
     val original_title: String = "",
