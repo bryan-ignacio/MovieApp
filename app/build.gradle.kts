@@ -62,4 +62,10 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
     // LiveData
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.2.0")
+    // RecyclerView con concatAdapter.
+    implementation("androidx.recyclerview:recyclerview:1.2.0")
+    //Utils
+    implementation("com.github.bumptech.glide:glide:4.11.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.11.0")
+
 }
