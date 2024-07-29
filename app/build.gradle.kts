@@ -42,7 +42,7 @@ android {
 
 dependencies {
 
-    implementation(libs.androidx.core.ktx)
+      implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
@@ -67,5 +67,8 @@ dependencies {
     //Utils
     implementation("com.github.bumptech.glide:glide:4.11.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.11.0")
-
+    //Room
+    implementation("androidx.room:room-runtime:2.2.6")
+    annotationProcessor("androidx.room:room-compiler:2.2.6")
+    implementation("androidx.room:room-ktx:2.2.6")
 }
