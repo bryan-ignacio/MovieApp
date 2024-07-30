@@ -4,7 +4,6 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.demoapp.carteleragt.data.model.Movie
 import com.demoapp.carteleragt.data.model.MovieEntity
 
 @Dao
@@ -15,6 +14,6 @@ interface MovieDao {
 
     //Insertar informacion en la base de datos.
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveMovie(movie: Movie)
+    suspend fun saveMovie(movie: MovieEntity)
 
 }

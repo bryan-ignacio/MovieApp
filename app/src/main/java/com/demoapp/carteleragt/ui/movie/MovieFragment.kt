@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ConcatAdapter
 import com.demoapp.carteleragt.core.Resource
 import com.demoapp.carteleragt.data.model.Movie
-import com.demoapp.carteleragt.data.remote.MovieDataSource
+import com.demoapp.carteleragt.data.remote.RemoteMovieDataSource
 import com.demoapp.carteleragt.presentation.MovieViewModel
 import com.demoapp.carteleragt.presentation.MovieViewModelFactory
 import com.demoapp.carteleragt.repository.MovieRepositoryImplement
@@ -30,7 +30,7 @@ class MovieFragment : Fragment(R.layout.fragment_movie), MovieAdapter.OnMovieCli
     private val viewModel by viewModels<MovieViewModel> {
         MovieViewModelFactory(
             MovieRepositoryImplement(
-                MovieDataSource(
+                RemoteMovieDataSource(
                     RetrofitClient.webservice
                 )
             )

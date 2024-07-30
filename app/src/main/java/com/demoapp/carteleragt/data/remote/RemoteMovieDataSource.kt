@@ -7,7 +7,7 @@ import com.demoapp.carteleragt.repository.WebService
 
 // metodos finales para traer la info desde el servidor.
 // vamos a crear la consulta al servidor para traer la data.
-class MovieDataSource(private val webservice: WebService) {
+class RemoteMovieDataSource(private val webservice: WebService) {
 
     // colocamos suspend porque el webservie tambien es suspend.
     suspend fun getUpcomingMovies(): MovieList = webservice.getUpcomingMovies(AppConstants.API_KEY)
