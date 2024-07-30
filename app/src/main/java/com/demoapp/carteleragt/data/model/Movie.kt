@@ -72,8 +72,8 @@ data class MovieList(val results: List<Movie> = listOf())
 // Esta funcion transforma la lista MovieEntity. a MovieList.
 fun List<MovieEntity>.toMovieList(): MovieList {
     val resultList = mutableListOf<Movie>()
-    this.forEach {
-        movieEntity -> resultList.add(movieEntity.toMovie())
+    this.forEach { movieEntity ->
+        resultList.add(movieEntity.toMovie())
     }
     return MovieList(resultList)
 }
@@ -94,4 +94,21 @@ fun MovieEntity.toMovie(): Movie = Movie(
     this.vote_average,
     this.vote_count,
     this.movie_type
+)
+
+fun Movie.toMovieEntity(movieTye: String): MovieEntity = MovieEntity(
+    this.id,
+    this.adult,
+    this.backdrop_path,
+    this.original_language,
+    this.original_title,
+    this.overview,
+    this.popularity,
+    this.poster_path,
+    this.release_date,
+    this.title,
+    this.video,
+    this.vote_average,
+    this.vote_count,
+    movie_type = movieTye
 )
